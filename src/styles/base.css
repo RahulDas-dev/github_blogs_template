@@ -1,0 +1,236 @@
+@import 'normalize.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    --header-height: 3rem;
+    /*========== Colors [HSL] ==========*/
+    --k:hsl(230, 92%, 80%);
+    --hue-color: 230;
+    --first-color: hsl(var(--hue-color),69%,61%);
+    --first-color-second: hsl(var(--hue-color),69%,61%);
+    --first-color-alt: hsl(var(--hue-color),57%,53%);
+    --first-color-lighter: hsl(var(--hue-color),92%,80%);
+    --title-color: hsl(var(--hue-color),8%,15%);
+    --text-color: hsl(var(--hue-color),18%,45%);
+    --text-color-light: hsl(var(--hue-color),8%,65%);
+    --input-color: hsl(var(--hue-color),70%,96%);
+    --body-color: hsl(var(--hue-color),60%,99%);
+    --container-color: hsl(230, 40%, 88%);
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: 0.25rem;
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 2.25rem;
+        --h1-font-size: 1.75rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+/*------------------General Size------------------*/
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    line-height: 1.4;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    font-size:var(--normal-font-size);
+    background-color: var(--body-color);
+    color: (--text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,h2,h3,h4{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+button{
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+
+.main{
+    margin: var(--header-height) 0 0 0;
+}
+
+.section{
+    padding: 3rem 0 4rem;
+}
+
+.section__title{
+    font-size: var(--h2-font-size);
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: var(--mb-3);
+}
+
+.section__subtitle{
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-3);
+    text-align: center;
+    color: var(--text-color);
+}
+
+.section_description{
+    color: var(--text-color);
+    margin-bottom: var(--mb-3);
+    font-size: var(--normal-font-size);
+}
+
+.container{
+    max-width: 738px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+
+.btn{
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 0.5rem .75rem;
+    border-radius: 0.25rem;
+    font-size: var(--small-font-size);
+    font-weight: 400;
+    transition: .3s ease-in-out;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-sm{
+    padding: 0.25rem .5rem;
+}
+
+.btn:hover{
+    background-color: var(--first-color-lighter);
+}
+
+.btn-icon{
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+}
+
+.btn-flex{
+    display: inline-flex;
+    align-items: center;
+}
+
+section>.section-header{
+    padding-bottom: var(--mb-1);
+}
+
+section>.section-header>.hline{
+    background-color: transparent;
+    height: 2px;
+}
+
+
+@media screen and (max-width: 350px) {
+    .container{
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        width: 75%; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body{
+        margin: 0;
+    }
+
+    .section{
+        padding: 6rem 0 2rem;
+    }
+   
+    section>.section-header{
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding-bottom: var(--mb-2);
+    }
+
+    section>.section-header>.section__title{
+        text-align: left;
+        margin-bottom: var(--mb-3);
+        margin-top: var(--mb-3);
+        padding-right: var(--mb-2-5)
+    }
+    
+    section>.section-header>.hline{
+        background-color: var(--container-color);
+        height: 2px;
+        flex: 1;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container{
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

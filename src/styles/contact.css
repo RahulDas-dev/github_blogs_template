@@ -1,0 +1,121 @@
+section.contact{
+    position: relative;
+}
+
+section.contact .section_description{
+    text-align: center;
+}
+
+section.contact>.contact__content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.25rem;
+    padding: var(--mb-3) 0;
+}
+
+section.contact>.contact__content>.contact__item{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: var(--text-color);
+}
+
+section.contact>.contact__content>.contact__item>.contact-icon{
+    padding-right: 0.75rem;
+    font-size: 1.5rem;
+    color: var(--first-color-alt);
+    transition: color 0.3ms ease-in-out;
+    vertical-align: middle;
+}
+
+section.contact>.mail-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.contact>.mail-info>.mail-data{
+    font-size: var(--small-font-size);
+    color: var(--first-color);
+    padding-bottom: 1.5rem;
+}
+
+section.contact>.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--mb-1)
+}
+
+section.contact>.social-icons>.social-icon.vline{
+    display: none;
+}
+
+section.contact>.social-icons>.social-icon{
+    padding-bottom: 1.25rem;
+    font-size: 1.25rem;
+    color: var(--first-color-alt);
+    transition: color 0.3ms ease-in-out;
+}
+
+section.contact>.social-icons>.social-icon:hover{
+    color: var(--first-color-lighter);
+}
+
+
+section.contact>.mail-info>.vline-right{
+    background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+    section.contact>.mail-info{
+        position: fixed;
+        bottom: 0;
+        right: var(--mb-3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section.contact>.mail-info>.mail-data{
+        text-orientation: mixed;
+        writing-mode: vertical-rl;
+        font-size: var(--small-font-size);
+        color: var(--first-color);
+        padding-bottom: 1.5rem;
+    }
+    section.contact>.mail-info>.mail-data>.mail-icon{
+        display: none;
+    }
+    
+    section.contact>.mail-info>.vline-right{
+        height: 35vh;
+        width: 2px;
+        background-color:  var(--first-color-lighter);
+    }
+
+    section.contact>.social-icons{
+        position: fixed;
+        top: var(--header-height);
+        left: var(--mb-3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    section.contact>.social-icons>.social-icon.vline{
+        display: block;
+        height: 35vh;
+        width: 2px;
+        background-color:  var(--first-color-lighter);
+    }
+    section.contact>.social-icons>.social-icon:nth-child(2){
+        padding-top: 1.5rem;
+    }
+}
+

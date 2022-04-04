@@ -1,0 +1,22 @@
+{
+    "personal": {
+        "name" : "Rahul Das",
+        "dob" : "13-03-1988",
+        "address":{
+            "line" : "Andul Road ",
+            "city": "Kolkata",
+            "state": "West Bengal",
+            "country": "India",
+            "pin":"711109"
+        },
+        "github":"https://github.com/RahulDas-dev",
+        "twitter":"https://twitter.com/Rahul13031988",
+        "linkedin":"https://www.linkedin.com/in/rahul-das-15416570",
+        "mobile": "8097397804",
+        "mail":"r.das699@gmail.com"
+    },
+    "page-title": "Central Limit Theorem"
+}
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    {{!--  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> --}}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={{page-title}}/>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>{{page-title}} </title>
+    <meta name="theme-color" content="#576ce0"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <!--==================== Header ====================-->
+    <header id="app-header">
+        <nav class="container">
+            <a class='icon-url' href="https://en.wikipedia.org/wiki/Central_limit_theorem" target="_blank" >
+                <img class='icon-img' src=./logo.svg alt="icon" />
+                <span class='icon-name'>Rahul</span>
+            </a>
+            <div class='app-header-title'>
+                <span>{{page-title}}</span>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <!--==================== MAIN REACT APP ====================-->
+        <div class="section container" id="app-root"></div>        
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact section container" id="contact">
+            <h1 class="section__title">Get In Touch </h1>
+            <p class="section_description">
+                My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+            </p>
+            <div class="contact__content">
+                <a class="btn" href="mailto:{{personal.mail}}">Say Hello</a>
+            </div>
+            <div class="social-icons">
+                <div class="social-icon vline"></div>
+                <a href={{ personal.linkedin }} target="_blank" class="social-icon">
+                    <i class="uil uil-linkedin-alt"></i>
+                </a>
+                <a href={{ personal.github }} target="_blank" class="social-icon">
+                    <i class="uil uil-github-alt"></i>
+                </a>
+                <a href={{ personal.twitter }} target="_blank" class="social-icon">
+                    <i class="uil uil-twitter-alt"></i>
+                </a>
+            </div>
+            <div class="mail-info">
+                <div class="mail-data">
+                    <i class="uil uil-envelope mail-icon"></i>
+                    {{personal.mail}}
+                </div>
+                <div class="vline-right"></div>
+            </div>
+
+        </section>
+    </main>
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div>
+            <small>Designed & Built by Rahul Das</small>
+        </div>
+        <div>
+            <a class="footer-info" href={{ personal.github }} target="_blank" >
+                <small>A responsive React app bundled with webpack.</small>
+                <i class="uil uil-code-branch footer-icon" ></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

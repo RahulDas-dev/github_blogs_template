@@ -1,0 +1,32 @@
+@import "base.css";
+@import "navbar.css";
+@import "scrollbar.css";
+@import "contact.css";
+
+
+
+footer.footer{
+    text-align: center;
+    padding-top: var(--mb-3);
+    padding-bottom: var(--mb-0-5);
+    
+    font-weight: var(--small-font-size);
+}
+
+footer.footer small{
+    color: var(--text-color);
+}
+
+footer.footer .footer-icon{
+    padding-right: 1.25rem;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    transition: color 0.3ms ease-in-out;
+    vertical-align: center;
+}
+
+footer.footer .footer-info{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
